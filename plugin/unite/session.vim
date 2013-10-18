@@ -49,6 +49,17 @@ if g:unite_source_session_enable_auto_save
   augroup END
 endif
 
+" Variables  "{{{
+call unite#util#set_default('g:unite_source_session_default_session_name',
+      \ 'default')
+call unite#util#set_default('g:unite_source_session_options',
+      \ 'buffers,curdir,folds,help,winsize')
+call unite#util#set_default('g:unite_source_session_path',
+      \ g:unite_data_directory . '/session')
+call unite#util#set_default(
+      \ 'g:unite_source_session_enable_beta_features', 0)
+"}}}
+
 let g:loaded_unite_source_session = 1
 
 let &cpo = s:save_cpo
